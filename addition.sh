@@ -1,6 +1,6 @@
 #!/bin/bash
-num1=10
-num2=20
+num1=$1
+num2=$2
 
-sum=$(id -u)
-echo "$sum"
+sum=$((num1+num2))
+echo "$sum" 
