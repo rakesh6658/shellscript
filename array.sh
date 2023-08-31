@@ -1,5 +1,5 @@
 #!/bin/bash
 
-names=("rakesh","mouli","maru")
+names=("rakesh" "mouli" "maru")
 
-echo "first name : $names@{0}"
+echo "first name : ${names[0]}"
