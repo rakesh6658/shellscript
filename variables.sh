@@ -1,6 +1,6 @@
 #!/bin/bash
 name1=rakesh
-name2=mouli
+name2=abhi
 echo "$name1: welcome to hyd $name2"
 echo "$name2: welcome to jagdalpur $name1"
 echo "$name1: how are you $name2"
