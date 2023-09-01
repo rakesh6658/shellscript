@@ -9,7 +9,7 @@ exit 1
 else
 echo "user is root"
 fi
-yum install git -y
+yum install gitt -y
 status=$?
 if [ $status -ne 0 ]
 then
