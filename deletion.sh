@@ -1,6 +1,6 @@
 #!/bin/bash
 
-location=/home/centos/shellscript
+location="/home/centos/shellscript"
 date=$(date "+%Y-%m-%d-%I-%M-%S")
 #echo "$date"
 scriptname=$0
