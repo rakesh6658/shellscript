@@ -24,14 +24,14 @@ fi
 
 for i in $@
 do
- yum list installed $i
+ yum list installed $i &>> log1.log
  if [ $? -ne 0 ]
  then
 yum install  $i -y &>> log1.log
 status=$?
 validate $status $i 
 else
-echo  -e "already installed $Y $i"
+echo  -e "already installed $Y $i $N"
 fi
 done
 
