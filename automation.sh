@@ -24,6 +24,6 @@ for i in $@
 do
 yum install  $i -y
 status=$?
-validate $status $git 
+validate $status $$i 
 done
 
