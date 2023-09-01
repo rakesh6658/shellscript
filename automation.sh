@@ -9,13 +9,17 @@ exit 1
 else
 echo "user is root"
 fi
-yum install gitt -y
-status=$?
-if [ $status -ne 0 ]
-then
-echo "git installation failure"
+validate() {
+    if [ $1 -ne 0 ]
+    then
+    echo "$2 installation failure"
 exit 1
 else
-echo "git installation success"
+echo "$2 installation success"
 fi
+}
+yum install gitt -y
+status=$?
+validate $status $git 
+
 
