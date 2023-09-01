@@ -10,6 +10,6 @@ while read -r line
 do
   echo "deleting $line " >> $logfile
   rm -rf $line
-done  < "$filenames"
+done <<< "$filenames"
 
 
