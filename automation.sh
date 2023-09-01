@@ -4,6 +4,7 @@ id=$(id -u)
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+Y="\e[33m"
 if [ $id -ne 0 ]
 then
 echo "user is not root user"
@@ -23,8 +24,13 @@ fi
 
 for i in $@
 do
+ yum list installed $i
+ if [ $? -ne 0 ]
+ then
 yum install  $i -y &>> log1.log
 status=$?
 validate $status $i 
+else
+echo  -e "already installed $Y $i"
 done
 
