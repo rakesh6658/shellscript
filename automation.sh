@@ -1,7 +1,9 @@
 #!/bin/bash
 
 id=$(id -u)
-
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 if [ $id -ne 0 ]
 then
 echo "user is not root user"
@@ -12,10 +14,10 @@ fi
 validate() {
     if [ $1 -ne 0 ]
     then
-    echo "$2 installation failure"
+    echo "$2 installation $R failure $N"
 exit 1
 else
-echo "$2 installation success"
+echo "$2 installation $G success $N"
 fi
 }
 
