@@ -6,7 +6,7 @@ echo "$num is less than 10"
 else
 echo "$num is greater than 10"
 fi
-for i in ( 1 -gt 10 )
+for i in (1 -gt 10)
 do
 echo "$i"
 done
