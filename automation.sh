@@ -18,8 +18,12 @@ else
 echo "$2 installation success"
 fi
 }
-yum install git -y
+
+
+for i in $@
+do
+yum install  $i -y
 status=$?
 validate $status $git 
-
+done
 
