@@ -18,7 +18,7 @@ else
 echo "$2 installation success"
 fi
 }
-yum install gitt -y
+yum install git -y
 status=$?
 validate $status $git 
 
