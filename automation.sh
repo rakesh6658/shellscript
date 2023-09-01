@@ -32,5 +32,6 @@ status=$?
 validate $status $i 
 else
 echo  -e "already installed $Y $i"
+fi
 done
 
