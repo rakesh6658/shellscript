@@ -22,7 +22,7 @@ fi
 
 for i in $@
 do
-yum install  $i -y
+yum install  $i -y &>> log1.log
 status=$?
 validate $status $i 
 done
