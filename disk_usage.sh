@@ -14,7 +14,7 @@ usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
 partition=$(echo $line | awk '{print $1}')
 if [ $usage -gt $treshold_usage ]
 then 
- message+= echo -e "HIGH DISK USAGE on $partition: $usage\n"
+ message+= -e "HIGH DISK USAGE on $partition: $usage\n"
  fi
 done <<< "$disk_usage"
 #echo "$message"
