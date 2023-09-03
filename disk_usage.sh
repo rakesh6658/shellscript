@@ -12,7 +12,7 @@ while IFS= read line
 do
 usage=$(echo $line | awk '{print $6}' | cut -d % -f1)
 partition=$(echo $line | awk '{print $1}')
-if [ $usage1 -gt $treshold_usage ]
+if [ $usage1 -gt $treshold_usage ];
 then 
  message+="HIGH DISK USAGE on $partition: $usage\n"
  fi
