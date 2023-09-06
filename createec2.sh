@@ -7,7 +7,7 @@ domain_name=lakshman.tech
 for i in "${names[@]}"
 do
 echo "$i"
-if [[ $i == "mongodb" || $i == "mysql" ]]
+if [[ $i =="mongodb" || $i =="mysql" ]]
 then
 instance_type="t3.medium"
 else
