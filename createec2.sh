@@ -16,7 +16,7 @@ ipaddress=$(aws ec2 run-instances --image-id $imageid --instance-type $instance_
 )
 fi
 echo "instance $i created with ip address $ipaddress"
-aws route53 change-resource-record-sets --hosted-zone-id Z04357831HTUC9WT90Z80 --change-batch'
+aws route53 change-resource-record-sets --hosted-zone-id Z04357831HTUC9WT90Z80 --change-batch '
 {
             "Changes": [{
             "Action": "CREATE",
@@ -26,6 +26,7 @@ aws route53 change-resource-record-sets --hosted-zone-id Z04357831HTUC9WT90Z80 -
                                     "TTL": 300,
                                  "ResourceRecords": [{ "Value": "'$ipaddress'"}]
 }}]
-}'
+}
+'
 done
 
