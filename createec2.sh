@@ -14,6 +14,7 @@ else
 instance_type="t2.micro"
 ipaddress=$(aws ec2 run-instances --image-id $imageid --instance-type $instance_type --security-group-ids $security_group  --tag-specifications "ResourceType=instance,Tags= [ {Key=Name,Value=$i}]" | jq -r '.Instances[0].PrivateIpAddress'
 )
+fi
 echo "instance 
 done
 
