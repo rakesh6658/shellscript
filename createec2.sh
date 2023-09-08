@@ -8,7 +8,7 @@ for i in "${names[@]}"
 do
 echo "$i"
 
-ipaddress=$(aws ec2 run-instances --image-id $imageid --instance-type $instance_type --security-group-ids $security_group  --tag-specifications "ResourceType=instance,Tags= [ {Key=Name,Value=$i}]" | jq -r '.Instances[0].PrivateIpAddress'
+ipaddress=$("aws ec2 run-instances --image-id $imageid --instance-type $instance_type --security-group-ids $security_group  --tag-specifications "ResourceType=instance,Tags= [ {Key=Name,Value=$i}]""| jq -r '.Instances[0].PrivateIpAddress'
 )
 
 echo "instance $i created with ip address $ipaddress"
