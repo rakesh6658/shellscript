@@ -1,6 +1,6 @@
 #!/bin/bash
 names=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
-instance_type=""
+instance_type=t2.micro
 imageid=ami-03265a0778a880afb
 security_group=sg-03161170439f7f149
 domain_name=lakshman.tech
