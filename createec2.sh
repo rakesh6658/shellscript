@@ -7,14 +7,10 @@ domain_name=lakshman.tech
 for i in "${names[@]}"
 do
 echo "$i"
-if [ [ $i == "mongodb" || $i == "mysql" ] ]
-then
-instance_type="t3.medium"
-else
-instance_type="t2.micro"
+
 ipaddress=$(aws ec2 run-instances --image-id $imageid --instance-type $instance_type --security-group-ids $security_group  --tag-specifications "ResourceType=instance,Tags= [ {Key=Name,Value=$i}]" | jq -r '.Instances[0].PrivateIpAddress'
 )
-fi
+
 echo "instance $i created with ip address $ipaddress"
 aws route53 change-resource-record-sets --hosted-zone-id Z04357831HTUC9WT90Z80 --change-batch '
 {
