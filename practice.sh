@@ -5,4 +5,4 @@ then
 echo " user is not root "
 exit 1
 fi
-echo " welcome to shellscript"
+yum install git -y
