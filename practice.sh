@@ -5,4 +5,4 @@ then
 echo " user is not root "
 exit 1
 fi
-yum install git -y
+yum install gitt -y
