@@ -13,6 +13,11 @@ then
 echo " user is not root "
 exit 1
 fi
+for i in {1..100}
+do
+echo $i
+done
+
 yum install git -y
 validate $? git
 
