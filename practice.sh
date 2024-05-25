@@ -28,7 +28,7 @@ do
  yum install $i -y &>>$logfile
  validate $? $i
  else
- echo -e "$Y $i is already installed"
+ echo -e "$Y $i is already installed $N "
  fi
 done
 
