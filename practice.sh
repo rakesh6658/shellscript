@@ -29,6 +29,7 @@ do
  validate $? $i
  else
  echo "$Y $i is already installed"
+ fi
 done
 
 
