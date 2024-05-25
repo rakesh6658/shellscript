@@ -13,16 +13,9 @@ then
 echo " user is not root "
 exit 1
 fi
-for i in {1..100}
+for i in $@
 do
-echo $i
+yum install $i -y
+validate $? $i
 done
 
-yum install git -y
-validate $? git
-
-
-yum install postfix -y
-validate $? postfix
-ym install javaa -y
-validate $? java
