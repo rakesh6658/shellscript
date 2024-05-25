@@ -9,9 +9,9 @@ N=\e[0m
 validate(){
     if [ $1 -ne 0 ]
 then
-echo "$2 installation is $R failure $N"
+echo  -e "$2 installation is $R failure $N"
 else 
-echo " $2 installation is $G success $N"
+echo -e " $2 installation is $G success $N"
 fi
 }
 if [ $userid -ne 0 ]
