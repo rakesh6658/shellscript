@@ -1,5 +1,8 @@
 #!/bin/bash
 userid=$(id -u)
+date=$(date +%F-%H-%M-%S)
+filename=$0
+logfile=/tmp/$filename-$date.log
 validate(){
     if [ $1 -ne 0 ]
 then
@@ -15,7 +18,7 @@ exit 1
 fi
 for i in $@
 do
-yum install $i -y
+yum install $i -y &>>$logfile
 validate $? $i
 done
 
