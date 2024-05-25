@@ -22,13 +22,13 @@ exit 1
 fi
 for i in $@
 do
- sudo yum list installed $i
+ sudo yum list installed $i &>>$logfile
  if [ $? -ne 0 ]
  then
  yum install $i -y &>>$logfile
  validate $? $i
  else
- echo "$Y $i is already installed"
+ echo -e "$Y $i is already installed"
  fi
 done
 
