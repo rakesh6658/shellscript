@@ -6,6 +6,7 @@ logfile=/tmp/$filename-$date.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+Y="\e[33m"
 validate(){
     if [ $1 -ne 0 ]
 then
@@ -21,8 +22,13 @@ exit 1
 fi
 for i in $@
 do
-yum install $i -y &>>$logfile
-validate $? $i
+ sudo yum list installed $i
+ if [ $? -ne 0 ]
+ then
+ yum install $i -y &>>$logfile
+ validate $? $i
+ else
+ echo "$Y $i is already installed"
 done
-echo -e "\e[31mRed Text\e[0m"
+
 
