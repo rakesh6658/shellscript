@@ -16,7 +16,7 @@ if [ $usage -gt $threshold ]
 then
 
 message+="high disk uasge on $partition : $usage \n"
-done
+fi
 done <<<$disk_usage
 echo -e "$message"
 
