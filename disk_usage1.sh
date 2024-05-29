@@ -12,7 +12,7 @@ do
  usage = $(echo $line | awk '{print $6}' | cut -d "%" -f 1 )
 partition= $(echo $line | awk '{print $1}' )
 message+="high disk uasge on $partition : $usage \n"
-done <<< $disk_usage
+done <<<$disk_usage
 echo -e "$message"
 
 
