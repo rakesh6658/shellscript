@@ -19,5 +19,5 @@ message+="high disk uasge on $partition : $usage \n"
 fi
 done <<<$disk_usage
 echo -e "$message"
-
+echo "$message" | mail -s "High disk usage" rakeshreddythummala944@gmail.com
 
