@@ -3,6 +3,6 @@ Team_name=$2
 body=$3
 alert_type=$4
 echo "all attributes : $@"
-message=$(sed -e "s|TEAM_NAME|$Team_name/" -e "s|ALERT_TYPE|$alert_type/" -e "s|MESSAGE|$body/" mail.html)
+message=$(sed -e "s|TEAM_NAME|$Team_name|" -e "s|ALERT_TYPE|$alert_type|" -e "s|MESSAGE|$body|" mail.html)
 echo -e "$message" | mail -s "$alert_type" "$To_address"
 
