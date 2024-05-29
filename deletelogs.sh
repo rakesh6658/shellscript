@@ -5,5 +5,5 @@ location=/home/centos/shellscriptlogs
 logfile=$scriptname-$date.log
 
 echo "$date $scriptname"
-filestodelete=$(find /home/centos/applogs -name *.log -type f -mtime +14)
+filestodelete=$(find /home/centos/applogs -name "*.log" -type f -mtime +14)
 echo "$filestodelete"
