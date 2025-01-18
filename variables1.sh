@@ -1,7 +1,7 @@
 #!/bin/bash
 person1=rakesh
 person2==dubbu
-echo "hi dubbu welcome to india"
-echo "hi rakesh how are you"
-echo "i am fine dubbu"
-echo "i am also fine rakesh"
+echo "hi $person2 welcome to india"
+echo "hi $person1 how are you"
+echo "i am fine $person2"
+echo "i am also fine $person1"
