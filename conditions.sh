@@ -1,6 +1,6 @@
 #!/bin/bash
 x=$1
-if[ x -eq sunday ];
+if[ x == "sunday" ]
 then
 echo " today is holiday enjoy"
 else
