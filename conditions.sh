@@ -1,8 +1,9 @@
 #!/bin/bash
 x=$1
-if[ $x == sunday ]
+y="sunday"
+if[ $x == $y ]
 then
-echo " today is holiday enjoy"
+echo "today is holiday enjoy"
 else
 echo "today is working go to school"
 fi
