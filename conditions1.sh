@@ -4,7 +4,7 @@ x=$1
 y=10
  if [ $x -gt $y ]
  then
- echo " number is greater than $y"
+ echo " $x is greater than $y"
  else
- echo " number is less than $y"
+ echo " $x is less than $y"
  fi
