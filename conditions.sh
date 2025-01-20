@@ -1,7 +1,7 @@
 #!/bin/bash
 x=$1
 y="sunday"
-if[ $x == $y ]
+if [ $x == $y ]
 then
 echo "today is holiday enjoy"
 else
