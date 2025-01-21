@@ -9,16 +9,16 @@ LOGDIR=/home/centos/shellscriptlogs
 name=$0
 date=$(date +%F-%H-%M-%S)
 logfile=$LOGDIR/$name-$date
-R=\e[31m
-G=\e[32m
-Y=\e[33m
-N=\e[0m
+r=\e[31m
+g=\e[32m
+y=\e[33m
+n=\e[0m
 validate(){
 if [ $1 == 0 ]
 then
-echo -e " $G $2 installation .... success $N"
+echo -e " $g $2 installation .... success $n"
 else
-echo -e " $R $2 installation ... failure $N"
+echo -e " $r $2 installation ... failure $n"
 fi     
 }
 for i in $@
@@ -26,7 +26,7 @@ do
 yum list installed $i &>> $logfile
 if [ $? == 0 ]
 then
-echo -e " $Y $i is already installed $N "
+echo -e " $y $i is already installed $n "
 else
 yum install $i -y &>> $logfile
 validate $? $i 
