@@ -7,5 +7,5 @@ echo "user is not root user"
 fi
 for i in $@
 do
-yum remove $i -y
+yum install $i -y
 done
