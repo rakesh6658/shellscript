@@ -23,7 +23,7 @@ fi
 }
 for i in $@
 do
-$i --version
+$i --version &>> $logfile
 if [ $? == 0 ]
 then
 echo -e " $Y $i is already installed $N "
