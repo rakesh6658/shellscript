@@ -32,4 +32,4 @@ yum install $i -y &>> $logfile
 validate $? $i 
 fi
 done
-echo -e "$R welcome to hyd"
+echo -e "\e[33m welcome to hyd"
