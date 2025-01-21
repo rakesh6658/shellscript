@@ -23,7 +23,7 @@ fi
 }
 for i in $@
 do
-$i --version &>> $logfile
+yum list installed $i &>> $logfile
 if [ $? == 0 ]
 then
 echo -e " $Y $i is already installed $N "
