@@ -30,4 +30,5 @@ echo -e " $Y $i is already installed $N "
 else
 yum install $i -y &>> $logfile
 validate $? $i 
+fi
 done
