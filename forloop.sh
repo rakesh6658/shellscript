@@ -9,10 +9,10 @@ LOGDIR=/home/centos/shellscriptlogs
 name=$0
 date=$(date +%F-%H-%M-%S)
 logfile=$LOGDIR/$name-$date
-R=\e[31m
-G=\e[32m
-Y=\e[33m
-N=\e[0m
+R=/e[31m
+G=/e[32m
+Y=/e[33m
+N=/e[0m
 validate(){
 if [ $1 == 0 ]
 then
