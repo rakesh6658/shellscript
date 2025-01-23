@@ -9,4 +9,4 @@ echo "files to delete $files_to_delete"
 while read  line;
 do
     echo $line
-done < “$files_to_delete”
+done < $files_to_delete
