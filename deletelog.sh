@@ -9,4 +9,4 @@ files_to_delete=$(find $logsdir -name "*.log" -type f -mtime +370)
 while read -r line;
 do
     echo $line
-done < $files_to_delete
+done <<< $files_to_delete
