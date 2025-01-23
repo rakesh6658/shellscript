@@ -8,5 +8,6 @@ files_to_delete=$(find $logsdir -name "*.log" -type f -mtime +370)
  #echo "files to delete $files_to_delete"
 while read -r line;
 do
-    echo $line
+    echo $line &>> $logfile
+    rm $line
 done <<< $files_to_delete
